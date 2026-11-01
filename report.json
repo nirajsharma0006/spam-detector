@@ -1,0 +1,107 @@
+{
+  "random_state": 42,
+  "labels": [
+    "normal",
+    "spam",
+    "scam"
+  ],
+  "data": {
+    "total": 300,
+    "train_size": 240,
+    "test_size": 60,
+    "label_counts": {
+      "normal": 100,
+      "spam": 100,
+      "scam": 100
+    }
+  },
+  "models": {
+    "naive_bayes": {
+      "accuracy": 0.85,
+      "macro_f1": 0.8497540093284774,
+      "precision": {
+        "normal": 0.9375,
+        "spam": 0.9411764705882353,
+        "scam": 0.7407407407407407
+      },
+      "recall": {
+        "normal": 0.75,
+        "spam": 0.8,
+        "scam": 1.0
+      },
+      "f1": {
+        "normal": 0.8333333333333334,
+        "spam": 0.8648648648648649,
+        "scam": 0.851063829787234
+      },
+      "support": {
+        "normal": 20,
+        "spam": 20,
+        "scam": 20
+      },
+      "confusion_matrix": [
+        [
+          15,
+          1,
+          4
+        ],
+        [
+          1,
+          16,
+          3
+        ],
+        [
+          0,
+          0,
+          20
+        ]
+      ],
+      "cv_macro_f1_mean": 0.8953701195683671,
+      "cv_macro_f1_std": 0.028609998629517384
+    },
+    "logistic_regression": {
+      "accuracy": 0.9333333333333333,
+      "macro_f1": 0.9328449328449328,
+      "precision": {
+        "normal": 0.9473684210526315,
+        "spam": 0.9473684210526315,
+        "scam": 0.9090909090909091
+      },
+      "recall": {
+        "normal": 0.9,
+        "spam": 0.9,
+        "scam": 1.0
+      },
+      "f1": {
+        "normal": 0.9230769230769231,
+        "spam": 0.9230769230769231,
+        "scam": 0.9523809523809523
+      },
+      "support": {
+        "normal": 20,
+        "spam": 20,
+        "scam": 20
+      },
+      "confusion_matrix": [
+        [
+          18,
+          1,
+          1
+        ],
+        [
+          1,
+          18,
+          1
+        ],
+        [
+          0,
+          0,
+          20
+        ]
+      ],
+      "cv_macro_f1_mean": 0.9299924608268639,
+      "cv_macro_f1_std": 0.022334091551704256
+    }
+  },
+  "best_model": "logistic_regression"
+}
